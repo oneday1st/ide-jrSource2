@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:drawable="@color/splash_background_dark" />
+	<item android:gravity="center" android:height="128.0dip" android:width="128.0dip" android:top="-128.0dip">
+		<bitmap android:src="@drawable/ic_launcher_teal_big" />
+	</item>
+	<item android:gravity="center" android:height="28.0dip" android:width="128.0dip" android:top="96.0dip">
+		<bitmap android:src="@drawable/aide_pro_text_teal" />
+	</item>
+</layer-list>
