@@ -1,0 +1,297 @@
+https://www.aidepro.top/version?from=app
+
+ v2.8.5 (2023110401)
+ Fix the bug that GradleNdk cannot be downloaded online
+ Modify GradleNdk project template to support Android.mk
+ Modify the default Ndk project template
+ Delete some hot chicken files
+
+ v2.7.8.3 (2023022510)
+ Optimize code entry
+ Add file browser parent directory location record
+
+ v2.7.8.2 (2023022010)
+ Remove redundant files and streamline the installation package
+ Fix the ScrollView scrolling issue after the editor gets focus
+ Upgrade icon library
+ Optimize code completion api query speed
+ Known bug fixes
+
+ v2.7.8.1 (20230213)
+ Optimize code completion api query speed
+ Known bug fixes
+
+ v2.7.8 (20230209)
+ Filtering useless information from MediaTek processor java console program
+ Add some custom functions
+ Add aapt2 (experimental)
+ Upgrade creation class function
+ fix some bugs
+ Delete AIDSamples.zip and you will not be able to use the template function of the Android tutorial
+ Known bug fixes
+
+ v2.7.7 (2023010702)
+ Optimized documents support Chinese and offline documents to speed up downloading
+ ActionBar Spinner optimization
+ Unshare it with your friends
+ Replace android.jar with android-33.jar
+ Fixed the problem of unresponsive search function in files
+ Fixed the code highlight setting color selection box crash under the Yalu theme
+ Optimize Gradle installation dialog copy
+ Default ndk installation optimization
+ Optimize confusion setting copy
+ Fixed crash in some tutorials
+ Fix the problem of default silent installation
+ Optimize copy prompts for failed silent installations
+ Fix git bug
+ Chineseized parts of the country
+ Add password saving for apk signature, no need to set password every time
+ Add new Class parsing library switch
+ Set up and add the list of magic modifiers
+ Known bug fixes
+
+ v2.7.6 (2023010301)
+ Add project backup and restore
+ Repair settings backup
+ Optimize settings page
+ Add ndk online download
+ Add donation interface
+ Fixed the bug that the input method pasteboard does not wrap lines
+ Visible part of Chinese version
+ Remove post-update notifications and dialog boxes
+ Tutorial adds Js and Web and localizes it
+ Refresh the maven repository and add a confirmation pop-up window
+ Fix n bugs (there are so many bugs that I forgot to fix them)
+ Add n functions (there are so many functions that I forgot to add them)
+ Known bug fixes
+
+ v2.7.53.1 (2023010201)
+ Fixed the problem that some systems could not find the Dc class and crashed
+
+ v2.7.52 (2022123101)
+ Added duck green and red themes
+ Add Xposed project template
+ Do not compile jars whose suffix contains _compileonly
+
+ The last version at the end of the year. Unknowingly, AIDE Pro has been iteratively updated for more than 2 years. Thank you for your continued support. I wish everyone a happy new year in 2023.
+
+ v2.7.51 (2022122001)
+ Fix silent installation
+
+ v2.7.5 (20221207)
+ Optimize terminal emulator
+ android.jar version updated to 33
+ Omit..
+
+ v2.7.3(20221127)
+ Add Google Translate
+ Added configurable translation interface priority
+ Add settings update prompt
+ Fix some bugs
+
+ v2.7.2(20221125)
+ Add check for updates function
+ Add settings backup function
+
+ v2.7.1(20221110)
+ Update terminal emulator
+ Added the ability to detect whether Gradle is installed when using Gradle to compile APK. If not, it will automatically download and install it.
+ Added D8 settings switch (upper right corner menu → More → Settings → Advanced settings → Default builder)
+ Added the option to use v when building APK signature using the default builder (upper right corner menu → More → Settings → Advanced settings → Default builder)
+ Added code formatting ((upper right corner menu → More → Settings → Tools)
+ Fix the failure to create APK signing certificate in high Android versions
+ Modify the translation API to
+   3.Yandex translation
+   2.Youdao Translation
+   1. Bing Translate
+  If there is a translation error, try one by one in the order of 1-3.
+ 
+  v2.7.0(20220720)
+ Modify the translation API to Google web interface
+
+ v2.6.46(20220110)
+ Gradle supports Android 12
+
+ v2.6.45(20211201)
+ Automatically register in AndroidManifest.xml when adding component classes
+ Optimize file reading speed on Android11 ​​and above → access all file permissions
+
+ v2.6.44(20211110)
+ The default build apk uses v1+v2 signature
+ Fix the problem that gradle> cannot find apk after packaging (scan the outputs/apk/xxx/ directory)
+
+ v2.6.43(20211021)
+ Improve software stability
+ Optimize software fluency
+ (This software Android12 cannot use gradle for the time being)
+
+ v2.6.42(20211002)
+ fix uidesign
+ Lcom/aide/uidesigner/la;->FH()V
+
+ v2.6.41(20201206)
+ Fix known bugs
+ Add a basic template
+ Adjusted toast
+
+ v2.6.4 (20201130)
+ Try to use the transparent floating window to keep the program service alive from being recalled.
+ Delete AIDESamples.zip, 50m -> 38m
+
+ v2.6.33 (20201122)
+ Replace command output message box
+
+ v2.6.3 (20201106)
+ Upgraded the gradle function and added build, assembleDebug, and assembleRelease commands
+
+ v2.6.2 (20201020)
+ Adjust template
+ Optimize compilation pop-up window
+ File browser supports displaying project icons
+
+ v2.6 (20201007)
+ Integrate Gradle compilation
+ Code completion box supports viewing api version
+
+ v2.5.5 (20201004)
+ Fixed several bugs
+ billions of adjustments
+
+ V2.5.4 (20200829)
+ Fixed several bugs
+ Added several bugs
+
+ V2.5.3 (20200828)
+ Fix low system version dex merge bug
+ Re-add the AppCompat template
+
+ V2.5.2 (20200827)
+ Fix dex merge bug
+
+ V2.5 (20200826)
+ {
+   "New": [
+     "Dex subcontracting repair function"
+   ],
+   "Adjustment": [
+     "Update icon library",
+     "Adjust the Tab key so you don't have to delete 4 times in a row",
+     "Optimize file creation and support the creation of multi-level directories a/b/c/d.java",
+     "Allow the system to force night in light theme mode"
+     "Optimized code completion document viewing"
+     "UI beautification"
+   ],
+   "repair":[
+   "When AndroidManifest.xml exists in the parent directory, the problem of creating project items is not displayed (only takes effect when the parent directory is an internal storage directory)"
+   ]
+   "template": [
+     "Delete AppCompat template"
+   ],
+   "translate": [
+     "Remove Yandex translation and use new interface",
+     "Remove res string translation function",
+     "Optimize translation request logic"
+   ]
+ }
+
+ v2.4.9 (20200613);
+ {
+   "fix": [
+     "The open file highlight index is invalid",
+     "view2java array length is inconsistent causing crash",
+     "Fixed the problem that the is stream of commonly used code files is closed and cannot be displayed later"
+   ]
+ }
+
+ v2.4.8 (20200611)
+ {
+   "Adjustment": [
+     "Chinese completion is turned off by default",
+     "Adjust settings and categorize functions",
+     "Adjust file sorting",
+     "Xiao Xiao adapted to night mode",
+     "replace android.jar to r"
+   ],
+   "fix": [
+     "Fix ActionBar bug",
+     "Fixed the bug that the dialog input method still displays after closing it (except in a few scenarios)",
+     "Fix the bug that sometimes clicks on items do not respond"
+   ],
+   "New": [
+     "Add two new classes... (Service and Broadcast Receiver)"
+   ]
+ }
+
+ v2.4.6 (20200522)
+ File browser pull down to refresh
+ Advanced settings and settings merge
+ File browser folders can display application icons
+
+ v2.4.3 (20200519)
+ Fix crash when clicking on notification bar
+ Fixed the bug that SplitView can still slide up after enabling the side sliding bar
+ Optimize the edit box dialog box and intelligently select the content before the decimal point after the file name suffix.
+ Add custom Gradle completion
+
+ v2.4 (20200516)
+ Support custom project paths
+ Adapt adaptive icons & shortcuts (android8.0+)
+ Optimize horizontal screen state
+ Known bug fixes
+
+ v2.3.6 (20200426)
+ Support English
+
+ v2.3.5 (20200424)
+ UI adjustments
+
+ v2.3.2 (20200405)
+ Chinese ui designer (turn on in advanced settings)
+
+ v2.3 (20200116)
+ Override "Add to project..." and "Add new class..."
+ File browser supports displaying pictures and installing apk
+
+ v2.0 (20191216)
+ Too lazy to talk
+ (Supplemented by 20201206)
+ Modify the side-sliding file browser
+ Add indigo theme
+ Only supports 5.0+
+ Remove some function options
+ Can't remember
+
+ v1.6.0 (20191111)
+ Added StringFog function
+ Added AppCompat and AndroidX project mutual conversion function (menu bar-more-more)
+ Custom edit box shortcut symbols support distinguishing between java and xml
+ After long pressing to select a piece of text, you can select translation in the menu bar
+ Error message for some Chinese code
+ Optimize translation word segmentation logic
+ Some functional adjustments and bug fixes
+
+ v1.5.0 (20191025)
+ Added res resource obfuscation function
+ Add icon center
+ Code highlighting supports configuring more parameters
+ Migrated to AIDE 3.2.191010
+
+ v1.2.3 (20191018)
+ Fix findVewId problem
+ Fixed translation failure return code issue
+ Fixed the issue with the background color of the edit box after switching to tutorial mode under the dark theme
+ Add a project template
+ Added option to set the maximum number of displayed rows of search result items
+ Optimize color picker
+ Code highlighting supports changing line number color
+
+ v1.2.1 (20191003)
+ Mainly fix some bugs
+ Added whether to display dialog box option when the file is not opened
+
+ v1.2 (20191002)
+ Added code completion automatic translation
+ Added redefine apk build path
+
+ Before v1.1
+ Lost... _(:з　∠)_
