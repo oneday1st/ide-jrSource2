@@ -1,14 +1,14 @@
 <menu>
     <menu format=".*AndroidManifest.xml">
-        <item title="添加写入SD卡权限">
+        <item title="Add Write Permission">
 
-            &lt;!--写入/删除您的SD卡中的内容--&gt;
+            &lt;!--Write/delete the contents of your SD card--&gt;
             &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&gt;
 
         </item>
     </menu>
     <menu format=".*.java">
-        <menu title="常用代码…">
+        <menu title="Code…">
             <item title="for">
 
                 for (int i = 0; i &lt; 0; i++) {
@@ -16,8 +16,8 @@
                 }
 
             </item>
-            <menu title="实用代码">
-                <item title="延迟执行">
+            <menu title="Code...">
+                <item title="postDelayed">
 
                     new Handler(Looper.getMainLooper()).postDelayed(new Runnable(){
 
@@ -33,14 +33,14 @@
                     Toast.makeText(getApplication(), "", Toast.LENGTH_SHORT).show();
 
                 </item>
-                <item title="新活动">
+                <item title="New Activity">
 
                     startActivity(new Intent(this, Object.class));
 
                 </item>
             </menu>
-            <menu title="活动…">
-                <item title="线程更新界面">
+            <menu title="Activity…">
+                <item title="runOnUiThread">
 
                     runOnUiThread(new Runnable(){
 
@@ -51,12 +51,15 @@
           			});
 
                 </item>
-                <item title="双击返回键退出">
+                <item title="Press back exit">
+
                     private long firstBackTime;
+
                     @Override
                     public void onBackPressed() {
+
                     if (System.currentTimeMillis() - firstBackTime > 2000) {
-                    Toast.makeText(this, "再按一次返回键退出程序", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "preen again to exit", Toast.LENGTH_SHORT).show();
                     firstBackTime = System.currentTimeMillis();
                     return;
                     }
@@ -66,29 +69,29 @@
 
                 </item>
             </menu>
-            <menu title="对话框">
-                <item title="普通对话框">
+            <menu title="AlertDialog">
+                <item title="Common Dialog">
 
                     AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("标题")
-                    .setMessage("内容")
-                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    .setTitle("Titie")
+                    .setMessage("Message")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dia, int which) {
 
                     }
                     })
-                    .setNegativeButton(android.R.string.cancel, null)
+                    .setNegativeButton("Cancel", null)
                     .create();
                     dialog.show();
 
                 </item>
-                <item title="列表对话框">
+                <item title="ListDialog">
 
                     CharSequence[] items = {""};
                     AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("标题")
+                    .setTitle("Titie")
                     .setItems(items, new DialogInterface.OnClickListener() {
 
                     @Override
@@ -96,18 +99,18 @@
 
                     }
                     })
-                    .setPositiveButton(android.R.string.ok, null)
-                    .setNegativeButton(android.R.string.cancel, null)
+                    .setPositiveButton("Ok", null)
+                    .setNegativeButton("Cancel", null)
                     .create();
                     dialog.show();
 
                 </item>
-                <item title="多选对话框">
+                <item title="MultiChoiceDialog">
 
                     CharSequence[] items={};
                     boolean[] checkedItems = {};
                     AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("标题")
+                    .setTitle("Titie")
                     .setMultiChoiceItems(items, checkedItems, new DialogInterface.OnMultiChoiceClickListener(){
 
                     @Override
@@ -115,17 +118,17 @@
 
                     }
                     })
-                    .setPositiveButton(android.R.string.ok, null)
-                    .setNegativeButton(android.R.string.cancel, null)
+                    .setPositiveButton("Ok", null)
+                    .setNegativeButton("Cancel", null)
                     .create();
                     dialog.show();
 
                 </item>
-                <item title="单选对话框">
+                <item title="SingleChoiceDialog">
 
                     CharSequence[] items = {};
                     AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("标题")
+                    .setTitle("Titie")
                     .setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
 
                     @Override
@@ -137,8 +140,8 @@
                     dialog.show();
 
                 </item>
-                <menu title="对话框事件">
-                    <item title="点击事件">
+                <menu title="DialogListener">
+                    <item title="ClickListener">
 
                         new DialogInterface.OnClickListener() {
 
@@ -149,7 +152,7 @@
                         }
 
                     </item>
-                    <item title="取消事件">
+                    <item title="CancelListener">
 
                         .setOnCancelListener(new DialogInterface.OnCancelListener(){
 
@@ -160,7 +163,7 @@
                         });
 
                     </item>
-                    <item title="销毁事件">
+                    <item title="DismissListener">
 
                         .setOnDismissListener(new DialogInterface.OnDismissListener(){
 
@@ -171,13 +174,13 @@
                         });
 
                     </item>
-                    <item title="按键事件">
+                    <item title="KeyListener">
 
                         .setOnKeyListener(new DialogInterface.OnKeyListener(){
 
                         @Override
                         public boolean onKey(DialogInterface dia, int keyCode, KeyEvent event) {
-                        //监听单击返回键
+                        //Listen and click back
                         if (keyCode == KeyEvent.KEYCODE_BACK 
                         &amp;&amp; event.getAction() == KeyEvent.ACTION_DOWN) {
 
@@ -188,7 +191,7 @@
                         });
 
                     </item>
-                    <item title="显示事件">
+                    <item title="Show Listener">
 
                         .setOnShowListener(new DialogInterface.OnShowListener(){
 
@@ -201,9 +204,9 @@
                     </item>
                 </menu>
             </menu>
-            <menu title="控件事件">
-                <menu title="通用">
-                    <item title="点击事件">
+            <menu title="ViewListener">
+                <menu title="Common">
+                    <item title="ClickListener">
 
                         .setOnClickListener(new View.OnClickListener() {
 
@@ -214,7 +217,7 @@
                         });
 
                     </item>
-                    <item title="长按事件">
+                    <item title="LongClickListener">
 
                         .setOnLongClickListener(new View.OnLongClickListener() {
 
@@ -226,7 +229,7 @@
                         });
 
                     </item>
-                    <item title="触摸事件">
+                    <item title="TouchListener">
 
                         .setOnTouchListener(new View.OnTouchListener(){
 
@@ -234,11 +237,11 @@
                         public boolean onTouch(View view, MotionEvent event) {
                         int action = event.getAction();
                         if (action == MotionEvent.ACTION_DOWN) {
-                        //点击
+                        //click
                         } else if (action == MotionEvent.ACTION_UP) {
-                        //松开  
+                        //up
                         } else if (action == MotionEvent.ACTION_MOVE) {
-                        //移动
+                        //move
                         }
                         return true;
                         }
@@ -246,13 +249,13 @@
 
                     </item>
                 </menu>
-                <menu title="编辑框">
-                    <item title="获取输入内容">
+                <menu title="EditText">
+                    <item title="GetInputText">
 
                         .getText().toString()
 
                     </item>
-                    <item title="内容监听事件">
+                    <item title="TextChangedListener">
 
                         .addTextChangedListener(new TextWatcher(){
 
@@ -274,8 +277,8 @@
 
                     </item>
                 </menu>
-                <menu title="列表">
-                    <item title="列表点击事件">
+                <menu title="AdapterView">
+                    <item title="ItemClickListener">
 
                         .setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -286,7 +289,7 @@
                         });
 
                     </item>
-                    <item title="列表长按事件">
+                    <item title="ItemLongClickListener">
 
                         .setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
@@ -298,7 +301,7 @@
                         });
 
                     </item>
-                    <item title="列表选择事件">
+                    <item title="ItemSelectedListener">
 
                         .setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
