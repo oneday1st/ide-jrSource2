@@ -1,0 +1,1445 @@
+<Course
+    release_date="2014-10-01"
+    icon="ic_launcher_web"
+	title="Web 开发"
+    
+    full_title="web development"
+	code_section="建立专业的Web网站"
+	code_template="从这个空项目模板开始创建自己的Web网站..">
+	
+    <Files 
+        template="simple_project"
+        project_name="My Website">
+    	<CodeFile name="index.html" />    
+    </Files>
+    
+    
+    <Sample
+        id="Bootstrap Components" 
+        title="Bootstrap 组件" 
+        description="浏览 Bootstrap 组件库。"
+        release_date="2014-10-01">
+
+        <CodeFile name="index.html" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Jumbotron"
+        title="Bootstrap Jumbotron"
+        description="探索如何围绕带有导航栏和一些基本网格列的超大屏幕构建网页。"
+        release_date="2014-10-01" >
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Carousel" 
+        title="Bootstrap Carousel" 
+        description="探索如何构建带有轮播和导航栏的网页。"
+        release_date="2014-10-01">
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Blog" 
+        title="Bootstrap 博客" 
+        description="探索如何构建具有自定义导航、标题和类型的两列博客页面。"
+        release_date="2014-10-01">
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    <Sample
+        id="Bootstrap Dashboard"
+        title="Bootstrap 仪表盘"
+        description="探索如何构建具有固定侧边栏和导航栏的基本管理仪表板页面。"
+        release_date="2014-10-01" >
+
+        <CodeFile name="index.html" />
+		<CodeFile name="styles.css" />
+    </Sample>
+    
+    
+    
+    
+    
+    <Lesson
+    	section="
+    	从这里开始web开发之旅！下面的互动课程带你一步一步学会使用HTML、CSS和JavaScript构建网站。"
+	    title="Hello World"
+		example="&lt;h1&gt;Hello World&lt;/h1&gt;"
+		description="第一课，运行你的第一个web程序。">
+
+	    <Exercise
+	        task="点击 !_运行_! 来运行下面的web程序。"
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>Hello$code_hint$ World</h1>
+
+    <p>This is my first website</p>
+
+  </body>
+</html>				
+				]]>
+	        </SourceCode>
+	        <Run  success="很好.你已经成功运行了第一个web程序！它的功能是在屏幕上输出：Hello World。继续下一步吧。" />
+	    </Exercise>
+	    <Exercise
+	        task="现在修改下面程序中蓝色箭头指向的 !_HTML_! 代码来输出 !_Hi World_! .然后运行。"
+	        level="5" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="只需要将括号内的 !_Hello World_! 修改为 !_Hi World_! 即可。">
+				<![CDATA[<h1>Hi World]]>
+	        </ExpectedCode>
+	        <Run success="很好！你已经将程序输出结果改为了 !_Hi World_! 。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺！你已经完成了第一课。现在你可以自己尝试改改代码.输出任意字符。然后进入下一课吧。" >
+	    </Exercise>
+	</Lesson>
+	
+    
+    
+    
+    
+    <Lesson
+	    title="项目结构"
+		example="&lt;html&gt; &lt;head&gt;"
+		description="第二课.您将学习使用HTML、CSS和JavaScript的基本结构。">
+
+        <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+    
+	    <Exercise
+	        task=" 下面是最简单的web程序.点击 !_运行_! 来运行下面的web程序。"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>$code_hint$
+  <head>
+    <link href="css/styles.css$code_hint_1$" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website$code_hint_3$</h1>
+
+    <p id="time">Time</p>
+
+	<script src="js/scripts.js$code_hint_2$"></script>
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+body$code_hint$
+{
+  font-size: 1em;$code_hint_1$
+}	
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+(function () {$code_hint$
+
+    var timeEl = document.getElementById("time");
+    timeEl.innerHTML = new Date();$code_hint_1$
+    
+})();
+				]]>
+	        </SourceCode>	
+	        <Run  success="很好!下面你可以看到网页浏览器是如何显示网站的。让我们看看它是如何工作的" />
+	    </Exercise>
+	    <Exercise
+	    
+	        task="这是这个网站的主要网页。这个文件中的HTML代码描述了web页面的可视化元素。HTML是一种用于描述web文档的标记语言。先阅读一下蓝色箭头处的代码，然后继续。"
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="HTML代码中使用一个 !_link_! 标签来指定CSS文件 !_styles.css_! 来对应页面的视觉风格。"
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="HTML代码使用一个 !_script_! 标签来指定JavaScript文件 !_scripts.js’‘来对应页面的动态行为。"
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="CSS文件‘‘styles.css’’定义了web页面的可视风格"
+	        code_file="styles.css"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="例如，这种‘‘font size’’的CSS风格在web页面的主体中定义了字体大小。"
+	        code_file="styles.css"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="JavaScript文件 !_scripts.js_! 定义了网页的动态行为。"
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="例如，这个JavaScript代码使web页面显示当前日期和时间。"
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint_1 />
+	        <Run  success="当您看到web页面时，显示当前日期和时间。让我们稍微修改一下" />
+	    </Exercise>
+	    <Exercise
+	        task="修改蓝色箭头上的HTML代码为 !_Current Time_! "
+	        code_file="index.html"
+	        level="5" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="只需把文本 !_My Website.改成 !_Current Time_! ">
+				<![CDATA[<h1>Current Time]]>
+	        </ExpectedCode>
+	        <Run success="很好!" />
+	    </Exercise>
+	    <Exercise
+	        task="修改 !_font_size_! 为 !_2em_! . "
+	        code_file="styles.css"
+	        level="5" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="只需将该行更改为 !_font-size: 2em_! .">
+				<![CDATA[font-size: 2em]]>
+	        </ExpectedCode>
+	        <Run success="非常好!您已经定制了web页面。点击下面的蓝色按钮，在真正的浏览器中打开网页。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺, 您已经了解了网站的基本结构!现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+	
+    
+    
+    
+    
+    <Lesson
+        section="使用HTML编码"
+	    title="标签"
+		example="&lt;h1&gt;"
+		description="第三课.您将了解HTML用于描述web页面的标签语言。">
+
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站.该网站被描述为HTML代码，web浏览器可以显示为文档"
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>$code_hint$
+  <body>$code_hint_2$
+
+    <h1>My first Heading</h1>$code_hint_3$
+
+    <p>This is a paragraph</p>$code_hint_4$
+	$code_hint_5$
+  </body>
+</html>$code_hint_1$			
+				]]>
+	        </SourceCode>
+	        <Run  success="很好!下面您可以看到web浏览器如何将HTML代码显示为web页面。" />
+	    </Exercise>
+	    <Exercise
+	        task="蓝色箭头指向一个HTML标签，这是一个由尖括号包围的关键字。"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="HTML标签通常成对出现。一对中的第一个标签是打开标签，第二个标签是结束标签，是用一个斜杠写的。添加两个标记的整个文本称为元素。"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="打开和关闭 !_body_! 标签之间的文本描述了可见的页面内容。每个HTML标签描述不同的文档内容。"
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task=" !_h1_! 标签之间的文本描述了一个标题。"
+	        level="1" >
+	        <CodeHint_3 />
+	    </Exercise>
+	    <Exercise
+	        task=" !_p_! 标签之间的文本描述了一个段落。"
+	        level="1" >
+	        <CodeHint_4 />
+	        <Run  success="正如你所看到的，我们的网页有一个标题和一个段落。接下来让我们添加更多内容。" />
+	    </Exercise>
+	    <Exercise
+	        task="在第二段添加 !_This is another paragraph_! "
+	        level="4" >
+	        <CodeHint_5 />
+	        <ExpectedCode
+	            fail="只要添加代码 !_&lt;p&gt;This is another paragraph&lt;/p&gt;_! .">
+				<![CDATA[<p>This is another paragraph</p>]]>
+	        </ExpectedCode>
+	        <Run  success="很好！" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,您已经在本课中学习了HTML基础知识!现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+    
+
+    
+
+    
+	<Lesson
+	    title="文本视图"
+		example="&lt;b&gt;Bold&lt;/b&gt;"
+		description="第四课.您将学习使用文本视图">
+
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text. $code_hint$Some more text.
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="只有一个标题和一些文本。让我们继续." />
+	    </Exercise>
+	    <Exercise
+	        task="在蓝色箭头上添加一个 !_br_! 标签，在文本中添加一条换行。"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加标签 !_&lt;br&gt;_! ">
+				<![CDATA[<br>]]>
+	        </ExpectedCode>
+	        <Run  success="很好!我们在文本中添加了一个换行。接下来让我们添加一些格式化文本。" />
+	    </Exercise>
+	    <Exercise
+	        task="在蓝色箭头上添加打开和关闭 !_b_! 标签以定义粗体文本。"
+	        level="3" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text.<br>
+	  Some more text.<br>
+	  $code_hint$
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_&lt;b&gt;&lt;/b&gt;_! ">
+				<![CDATA[<b></b>]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="在 !_b_! 标签之间添加文本 !_Some bold text._! "
+	        level="3" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text.<br>
+	  Some more text.<br>
+	  <b>$code_hint$</b>
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_&lt;b&gt;Some bold text.&lt;/b&gt;_! ">
+				<![CDATA[<b>Some bold text.</b>]]>
+	        </ExpectedCode>
+	        <Run  success="很好! !_b_! 标签用于定义粗体文本." />
+	    </Exercise>
+	    <Exercise
+	        task="现在使用 !_i_! 标签来添加斜体文本 !_Some italac text _! "
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<p>
+	  Some text.<br>
+	  Some more text.<br>
+	  <b>Some bold text.</b><br>
+	  $code_hint$
+	</p>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_&lt;i&gt;Some italic text.&lt;/i&gt;_! ">
+				<![CDATA[<i>Some italic text.</i>]]>
+	        </ExpectedCode>
+	        <Run  success="棒级了！" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,您已经学习了基本的文本格式。现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+    
+        
+        
+        
+        
+    <Lesson
+	    title="图像"
+		example="&lt;img src=&quot;myimage.png&quot;&gt;"
+		description="第五课.你将学习到使用网页图片.">
+
+        <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站.它添加了一个图像."
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<img$code_hint$ src="img/android.jpg$code_hint_1$">
+	$code_hint_2$
+	
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="很好!让我们学习一下图像如何在HTML中工作。" />
+	    </Exercise>
+	    <Exercise
+	        task=" !_img_! 标签用于添加一个图像。"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task=" !_src_! 属性用于定义图像。这里使用这个网站项目的文件 !_img/android.jpg_! "
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="在文件中添加第二个图像 !_img/html.jpg_! ."
+	        level="4" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="添加代码 !_&lt;img src=&quot;img/html.jpg&quot;&gt;_! .">
+				<![CDATA[<img src="img/html.jpg">]]>
+	        </ExpectedCode>
+	        <Run  success="Great!" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺, 你已经学会了在这节课中添加图片！ 现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+
+    
+    
+    
+	<Lesson
+	    title="超链接"
+		example="&lt;a href=&quot;www.google.com&quot;&gt;...&lt;/a&gt;"
+		description="第六课.你将学习在你的网页中添加超链接">
+
+	    <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站. 它添加了一个超链接，你可以点击打开另一个网页。"
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<a$code_hint$ href="http://www.google.com$code_hint_1$">Google$code_hint_2$</a>
+    $code_hint_3$
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="很好!点击这个网页上的 !_Google_! 链接。让我们了解一下链接是如何在HTML中工作的。." />
+	    </Exercise>
+	    <Exercise
+	        task="超链接定义为HTML中的 !_a_! 标签。"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task=" !_a_! 标签的 !_href_! 属性指定链接的目标 !_http://www.google.com_! 。."
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="打开和关闭 !_a_! 标签之间的文本显示在web页面中。"
+	        level="1" >
+	        <CodeHint_2 />
+	    </Exercise>
+	    <Exercise
+	        task="添加第二个链接 !_http://www.android.com_! 和 !_Android_! 文本。"
+	        level="4" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="在 !_a_! 标签添加链接 !_&lt;a href=&quot;http://www.android.com&quot;&gt;&lt;/a&gt;_! .">
+				<![CDATA[<a href="http://www.android.com">]]>
+	        </ExpectedCode>
+	        <ExpectedCode
+	            fail="在打开和关闭 !_a_! 标签之间添加文本 !_Android_! 。">
+				<![CDATA[<a href="http://www.android.com">Android</a>]]>
+	        </ExpectedCode>
+	        <Run  success="很好!测试一下新添加的超链接。" />
+	    </Exercise>
+	    <Exercise
+	        task="如果要使用图像作为链接，需要在 !_a_! 标签中添加一个图像 !_img/android.jpg_! 。"
+	        level="4" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<a href="http://www.android.com">
+	  $code_hint$
+	</a>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_&lt;img src=&quot;img/android.jpg&quot;&gt;_! ">
+				<![CDATA[<img src="img/android.jpg">]]>
+	        </ExpectedCode>
+	        <Run  success="很好!试试点击图片。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,这节课你已经学到了超链接！现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+    
+	
+	
+	
+	<Lesson
+	    title="列表视图"
+		example="&lt;ul&gt;...&lt;/ul&gt;"
+		description="第七课.你将学习到在你的网页中添加列表。">
+
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站.它添加了一个列表。 "
+	        level="1" >
+	        <SourceCode>
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+
+	<ul>$code_hint$
+	  <li>Google</li>$code_hint_1$
+	  $code_hint_2$
+	</ul>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <Run  success="很好!在这个列表中，只有列表项。让我们添加更多的标签。" />
+	    </Exercise>
+	    <Exercise
+	        task=" !_ul_! 标签用于在HTML中定义一个列表。"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="每个列表项都是用 !_li_! 标记定义的。"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="添加第二个列表项文本为 !_Android_! ."
+	        level="4" >
+	        <CodeHint_2 />
+	        <ExpectedCode
+	            fail="添加列表项 !_&lt;li&gt;Android&lt;/li&gt;_! .">
+				<![CDATA[<li>Android</li>]]>
+	        </ExpectedCode>
+	        <Run  success="很好!您已经添加了第二个列表项。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,这节课你已经学会如何添加列表！现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+	
+
+	
+	
+	
+	<Lesson
+	    section="使用CSS来定义web外观"
+	    title="使用 CSS"
+		example="&lt;style&gt;...&lt;/style&gt;"
+		description="第八课.你将学习如何在网页中加入CSS来定义它的视觉风格。">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1 style$code_hint$="color: Red$code_hint_1$;">My Website</h1>
+    
+    <p>A paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="我们看到这个网页有一个红色的标题。让我们看看这是如何实现的。" />
+	    </Exercise>
+	    <Exercise
+	        task=" !_h1_! 标签有一个内联的 !_style_! 属性，它设置了CSS风格。"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="现在将CSS的 !_color_! style改为 !_Blue_! ."
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="把 !_Red_!  改成  !_Blue_! .">
+				<![CDATA[color: Blue]]>
+	        </ExpectedCode>
+	        <Run  success="很好!现在标题是蓝色的。" />
+	    </Exercise>
+	    <Exercise
+	        task="我们现在使用的是 !_style_! 标签，而不是 !_style_! 属性，它可以为web页面多个标题自定义风格。"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+	<style$code_hint$>
+	  h1$code_hint_1$ { color: Blue$code_hint_2$; }
+	  $code_hint_3$
+	</style>
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <p>A paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="我们的内部风格表定义了 !_h1_! 标签的规则集。"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="规则集设置CSS  !_color_!  style 为  !_Blue_! ."
+	        level="1" >
+	        <CodeHint_2 />
+	        <Run  success="我们的标题仍然是蓝色的。" />
+	    </Exercise>
+	    <Exercise
+	        task="现在，为 !_p_! 标签添加第二个规则集，将CSS的 !_color_! 风格设置为 !_Green_! 。"
+	        level="4" >
+	        <CodeHint_3 />
+	        <ExpectedCode
+	            fail="只需要添加代码 !_p { color: Green; }_! .">
+				<![CDATA[p { color: Green; }]]>
+	        </ExpectedCode>
+	        <Run  success="很好！段落文本现在是绿色的." />
+	    </Exercise>
+	    <Exercise
+	        task="我们现在不用直接在HTML页面中定义 !_style_! 标签，而是使用 !_link_! 标签链接到外部CSS文件 !_styles.css_! 。"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css$code_hint$" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <p>A paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+h1 { color: Blue; }$code_hint$
+p { color: Green; }
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="CSS文件_! styles.css_! 包含 !_h1 _! 和 !_p_! 的css规则集’."
+	        code_file="styles.css"
+	        level="1" >
+	        <CodeHint />
+	        <Run  success="当显示web页面时，仍然应用链接的CSS文件风格。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,您已经学习了如何在这一课中加入CSS !现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+	
+		
+		
+
+	
+	<Lesson
+	    title="类选择器"
+		example="class=&quot;blue-text&quot;"
+		description="第九课.你将学习到使用CSS类选择器来风格化HTML元素。">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <p>A paragraph.<p>
+
+    <p>Another paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="这个网页有两个段落。让我们来修改一下" />
+	    </Exercise>
+	    <Exercise
+	        task="在CSS文件中，我们定义了一个 !_p_! 标签的规则集，它将 !_color_! 的风格设置为 !_Blue_! 。"
+	        code_file="styles.css"
+	        level="1" >
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+p$code_hint$ { color: Blue; }
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <Run  success="现在两段都是蓝色的。下面让我们学习为每一段定义不同的颜色。" />
+	    </Exercise>
+	    <Exercise
+	        task="现在我们不再使用标记选择器，而是定义了一个类选择器 !_blue-text_! 。类选择器从一个点开始。"
+	        code_file="styles.css"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <p class="blue-text"$code_hint$>A paragraph.<p>
+
+    <p$code_hint_1$>Another paragraph.<p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+.blue-text$code_hint$ { color: Blue; }
+
+$code_hint_1$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="我们使用 !_class_! 属性为第一个 !_p_! 标记设置类 !_blue-text_! "
+	        level="1" >
+	        <CodeHint />
+	        <Run  success="现在，只有第一个段落是蓝色的，因为CSS规则只适用于带有类 !_blue-text_! 的HTML元素。让我们把第二段变绿。" />
+	    </Exercise>
+	    <Exercise
+	        task="为类添加一个CSS规则集 !_green-text_! 设置 !_color_! 风格为 !_Green_! ."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="只需添加CSS代码  !_.green-text { color: Green; }_! .">
+				<![CDATA[.green-text { color: Green; }]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="为第二段设置  !_green-text_! "
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="添加属性 !_class=&quot;green-text&quot;_! ">
+				<![CDATA[class="green-text"]]>
+	        </ExpectedCode>
+	        <Run  success="很好!你已经设置了第二段。 " />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,在本课程中，您已经学会使用CSS类选择器了！现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+	
+		
+		
+				
+	<Lesson
+	    title="文本风格"
+		example="font-size: 2em;"
+		description="第十课.你将学习到定义文本风格">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+        	<CodeFile name="styles.css" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisici elit, 
+      sed eiusmod tempor incidunt ut labore et dolore magna 
+      aliqua. Ut enim ad minim veniam, quis nostrud 
+      exercitation ullamco laboris nisi ut aliquid ex ea 
+      commodi consequat. Quis aute iure reprehenderit in 
+      voluptate velit esse cillum dolore eu fugiat nulla 
+      pariatur. Excepteur sint obcaecat cupiditat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est 
+      laborum.
+    <p>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="styles.css">
+	            <![CDATA[
+$space$
+p {
+  $code_hint$
+}
+				]]>
+	        </SourceCode>
+	        <Run  success="让我们改变文本的视觉风格。" />
+	    </Exercise>
+	    <Exercise
+	        task="设置 !_color_! 风格为 !_Green_! ."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加CSS风格 !_color: green;_! .">
+				<![CDATA[color: Green;]]>
+	        </ExpectedCode>
+	        <Run  success="太棒了!让我们改变文本的对齐方式。" />
+	    </Exercise>
+	    <Exercise
+	        task="设置 !_text-align_! 风格为 !_center_! ."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加CSS风格 !_text-align: center;_! .">
+				<![CDATA[text-align: center;]]>
+	        </ExpectedCode>
+	        <Run  success="很好！让我们改变一下文本装饰。" />
+	    </Exercise>
+	    <Exercise
+	        task="设置 !_text-decoration_! 风格为 !_underline_! ."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加CSS风格 !_text-decoration: underline;_! .">
+				<![CDATA[text-decoration: underline;]]>
+	        </ExpectedCode>
+	        <Run  success="很好! 让我们改变字体大小。" />
+	    </Exercise>
+	    <Exercise
+	        task="设置 !_font-size_! 风格为 !_2em_! ."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加CSS风格 !_font-size: 2em;_! .">
+				<![CDATA[font-size: 2em;]]>
+	        </ExpectedCode>
+	        <Run  success="完美!让我们改变字体样式。" />
+	    </Exercise>
+	    <Exercise
+	        task="设置 !_font-style_! 风格为 !_italic_! ."
+	        code_file="styles.css"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加CSS风格 !_font-style: italic;_! .">
+				<![CDATA[font-style: italic;]]>
+	        </ExpectedCode>
+	        <Run  success="很好！通过设置不同的CSS风格，更改了不同的文本风格。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺, 在这节课中，您已经了解了CSS文本风格！ 现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+	
+		
+		
+	
+	<Lesson
+	    section="使用JavaScript和DOM来调节web页面的动态行为进行编码"
+	    title="使用 JavaScript"
+		example="&lt;script&gt;...&lt;/script&gt;"
+		description="第十一课.您将学习如何在web页面中添加JavaScript代码来编写它的动态行为。">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <script>$code_hint$
+      alert$code_hint_1$("Hello from JavaScript!"$code_hint_2$);
+    </script>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="web页面将打开一个带有消息的警告对话框。让我们来学习如何做到这一点" />
+	    </Exercise>
+	    <Exercise
+	        task="HTML代码包含一个 !_script_! 标记，它定义了在加载web页面时执行的JavaScript代码。"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="代码调用内置的JavaScript函数 !_alert_! 打开对话框。"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="将对话框的消息更改为其他内容。"
+	        level="3" >
+	        <CodeHint_2 />
+	        <Run  success="很好！" />
+	    </Exercise>
+	    <Exercise
+	        task="我们现在在 !_script_! 标签中使用 !_src_! 的 !_script_! 来包含外部的JavaScript文件 !_scripts.js_! 不是直接将JavaScript代码包含在HTML中。"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <script src="js/scripts.js$code_hint$"></script>
+
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+alert("Hello from JavaScript!");$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="JavaScript文件 !_scripts.js_!  包含了  !_alert_!  function call."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	        <Run  success="正如您所看到的，当页面显示时，外部JavaScript代码仍然被执行。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,在本节课中，您已经学习了如何在您的web页面中使用JavaScript！现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+
+	
+	
+	
+	<Lesson
+	    title="点击事件"
+		example="onclick=&quot;showDialog()&quot;"
+		description="第十二课.你将学习到对web页面中的用户事件作出反馈。">
+
+	    <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <img src="img/android.jpg"$code_hint$>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+				]]>
+	        </SourceCode>
+	        <Run  success="web页面添加了一个图像。当单击时，让我们实现一个动作。" />
+	    </Exercise>
+	    <Exercise
+	        task="在 !_img_! 标签中添加一个属性 !_onclick=alert('Android')&quot;_! ， !_onclick_! 属性定义了在单击元素时执行的JavaScript。"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_onclick=&quot;alert('Android')&quot;_! ">
+				<![CDATA[onclick="alert('Android')"]]>
+	        </ExpectedCode>
+	        <Run  success="很好！现在试试点击图像" />
+	    </Exercise>
+	    <Exercise
+	        task="更改 !_alert('Android')_! 为 !_showDialog()_! 以调用您自己的JavaScript函数."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h1>My Website</h1>
+    
+    <img src="img/android.jpg" onclick="alert('Android')$code_hint$">
+    
+    <script src="js/scripts.js$code_hint_1$"></script>
+    
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+$code_hint$
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="在蓝色箭头处添加代码 !_onclick=&quot;showDialog()&quot;_! ">
+				<![CDATA[onclick="showDialog()"]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="我们将 !_script_! 标签的JavaScript代码从 !_scripts.js_! 文件引入。"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="在 !_scripts.js_! 文件中添加JavaScript函数 !_showDialog_! "
+	        code_file="scripts.js"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="在蓝色箭头处添加代码 !_function showDialog() {}_! ">
+				<![CDATA[function showDialog()]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="在 !_showDialog_! 函数中添加方法 !_alert(&quot;Android&quot;)_! 来调用显示"
+	        code_file="scripts.js"
+	        level="3" >
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+function showDialog() {
+	$code_hint$
+}
+				]]>
+	        </SourceCode>
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="在蓝色箭头处添加代码 !_alert(&quot;Android&quot;)_! ">
+				<![CDATA[alert(]]>
+	        </ExpectedCode>
+	        <Run  success="很好!点击图像 !_showDialog_! 函数会被调用并显示对话框。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺,在本节课中,您已经学会了JavaScript事件反馈!现在你可以自己尝试改改代码. 然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>
+		
+	
+	
+	
+	
+	<Lesson
+	    title="DOM(文档对象模型)"
+		example="document.getElementById(&quot;id&quot;)"
+		description="第十三课.您将学习如何从JavaScript访问HTML元素。">
+
+	    <Files 
+	        template="simple_project"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站."
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <p id="time"$code_hint$>Time</p>
+
+	<script src="js/scripts.js$code_hint_1$"></script>
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+$code_hint$
+				]]>
+	        </SourceCode>	
+	        <Run  success="我们让web页面从JavaScript显示当前时间。" />
+	    </Exercise>
+	    <Exercise
+	        task=" !_p_! 元素有一个 !_id_! 属性 !_时间_! 。该id使访问和操作JavaScript代码中的元素变得更加容易。"
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="HTML代码使用 !_script_! 标签来添加JavaScript文件 !_scripts.js_! ."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="添加JavaScript代码 !_var timeElement = document.getElementById(&quot;time&quot;);_! 访问文档对象模型(DOM)中的HTML元素"
+	        code_file="scripts.js"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_var timeElement = document.getElementById(&quot;time&quot;);_! ">
+				<![CDATA[var timeElement = document.getElementById("time")]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="现在使用代码 !_timeElement.innerHTML = new Date();_! 来更改HTML元素以显示当前日期和时间"
+	        code_file="scripts.js"
+	        level="3" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加代码 !_timeElement.innerHTML = new Date();_! ">
+				<![CDATA[timeElement.innerHTML = new Date()]]>
+	        </ExpectedCode>
+	        <Run  success="很好!JavaScript代码更改段落以显示当前日期和时间。" />
+	    </Exercise>
+	    <Exercise
+	        task="祝贺！您已经学会了从JavaScript DOM中访问HTML元素！现在，您可以自己动手编写代码。然后继续下一课" >
+	    </Exercise>
+	</Lesson>
+
+	
+	
+	
+	<Lesson
+	    title="用户交互"
+		example="onclick=&quot;toggleImage()&quot;"
+		description="第十四课.您将学习使用事件监听和DOM操作对用户交互作出反应。">
+
+	    <Files 
+	        template="simple_project"
+	        template2="simple_project_images"
+	        project_name="My Website">
+	    	<CodeFile name="index.html" />    
+	    	<CodeFile name="scripts.js" />    
+	    </Files>
+	    
+	    <Exercise
+	        task="点击‘‘运行’’查看下面的网站。"
+	        level="1" >
+	        <SourceCode code_file="index.html">
+	            <![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h1>My Website</h1>
+
+    <img src="img/android1.png"$code_hint$>
+
+	<script src="js/scripts.js$code_hint_1$"></script>
+  </body>
+</html>			
+				]]>
+	        </SourceCode>
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+function toggleImage() {$code_hint$
+	$code_hint_1$
+}
+				]]>
+	        </SourceCode>	
+	        <Run  success="当用户点击它时，让我们改变图像" />
+	    </Exercise>
+	    <Exercise
+	        task="将 !_img_! 元素的 !_id_! 设置为 !_myImage_! "
+	        code_file="index.html"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加属性 !_id=&quot;myImage&quot;_! ">
+				<![CDATA[id="myImage"]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="添加一个 !_onclick_! 事件处理程序，该处理程序调用函数 !_toggleImage()_! ."
+	        code_file="index.html"
+	        level="4" >
+	        <CodeHint />
+	        <ExpectedCode
+	            fail="添加属性 !_onclick=&quot;toggleImage()&quot;_! ">
+				<![CDATA[onclick="toggleImage()"]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="HTML代码使用 !_script_! 标签来添加JavaScript文件 !_scripts.js_! ."
+	        code_file="index.html"
+	        level="1" >
+	        <CodeHint_1 />
+	    </Exercise>
+	    <Exercise
+	        task="我们已经添加了事件处理函数 !_toggleImage_! ."
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	    </Exercise>
+	    <Exercise
+	        task="现在添加代码 !_var image = document.getElementById(&quot;myImage&quot;);_! 来访问HTML图像元素。"
+	        code_file="scripts.js"
+	        level="3" >
+	        <CodeHint_1 />
+	        <ExpectedCode
+	            fail="在蓝色箭头处添加代码 !_var image = document.getElementById(&quot;myImage&quot;);‘">
+				<![CDATA[var image = document.getElementById("myImage")]]>
+	        </ExpectedCode>
+	    </Exercise>
+	    <Exercise
+	        task="我们添加了一个if语句来切换HTML图像元素的 !_src_! 属性。"
+	        code_file="scripts.js"
+	        level="1" >
+	        <CodeHint />
+	        <SourceCode code_file="scripts.js">
+	            <![CDATA[
+$space$
+function toggleImage() {
+    var image = document.getElementById("myImage");
+    
+    if (image.src.match("android1")) {
+        image.src$code_hint$ = "img/android2.png";
+    } else {
+        image.src = "img/android1.png";
+    }
+}
+				]]>
+	        </SourceCode>	
+	        <Run  success="很好!现在点击图片，看看会发生什么。" />
+	    </Exercise>
+	    <Exercise
+	        task="恭喜您，在本课中，您已经学会了在网页内实现用户交互！现在尝试自己改动一下代码。更改所显示的文本，然后继续下一课吧" >
+	    </Exercise>
+	</Lesson>	
+</Course>
+
