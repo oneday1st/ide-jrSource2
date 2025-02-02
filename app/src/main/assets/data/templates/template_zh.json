@@ -1,0 +1,97 @@
+{
+  "category": [
+    {
+      "icon": "as.png",
+      "title": "Android 项目",
+      "templates": [
+        {
+          "icon": "app.png",
+          "title": "新建 Android App",
+          "describes": "空白项目",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/gradleApp.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        },
+        {
+          "icon": "app.png",
+          "title": "新建 AndroidX App",
+          "describes": "AndroidX项目",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/androidx.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        },
+        {
+          "icon": "app.png",
+          "title": "新建 NDK App",
+          "describes": "Gradle C/C++项目",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/gradleNdk.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle",
+              ".*.c"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        },
+        {
+          "icon": "xposed.png",
+          "title": "新建 Xposed App",
+          "describes": "Xposed模块",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/xposed.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle",
+              ".*xposed_init"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/HookInit.java",
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

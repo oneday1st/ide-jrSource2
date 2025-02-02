@@ -1,0 +1,97 @@
+{
+  "category": [
+    {
+      "icon": "as.png",
+      "title": "Android Project",
+      "templates": [
+        {
+          "icon": "app.png",
+          "title": "New Android App",
+          "describes": "Empty Project",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/gradleApp.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        },
+        {
+          "icon": "app.png",
+          "title": "New AndroidX App",
+          "describes": "AndroidX Project",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/androidx.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        },
+        {
+          "icon": "app.png",
+          "title": "New NDK App",
+          "describes": "Gradle C/C++ Project",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/gradleNdk.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle",
+              ".*.c"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        },
+        {
+          "icon": "xposed.png",
+          "title": "New Xposed App",
+          "describes": "Xposed module",
+          "project": {
+            "type": "android",
+            "main": "app",
+            "template": "common/xposed.zip",
+            "replaces": [
+              ".*.xml",
+              ".*.java",
+              ".*.gradle",
+              ".*xposed_init"
+            ],
+            "openFile": [
+              "src/main/java/$package_name$/HookInit.java",
+              "src/main/java/$package_name$/MainActivity.java",
+              "src/main/res/layout/activity_main.xml",
+              "src/main/AndroidManifest.xml",
+              "build.gradle"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
