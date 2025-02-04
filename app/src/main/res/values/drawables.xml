@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item type="drawable" name="dummy_ae_0">false</item>
+<item type="drawable" name="dummy_ae_a0">false</item>
+<item type="drawable" name="dummy_ae_bb">false</item>
+<item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+<item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
+<item type="drawable" name="dummy_ae_ef">false</item>
+</resources>
