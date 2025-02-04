@@ -1,1 +1,8 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="TextAppearance.Compat.Notification.Info.Media" parent="@style/TextAppearance.Compat.Notification.Info" />
+<style name="TextAppearance.Compat.Notification.Media" parent="@style/TextAppearance.Compat.Notification" />
+<style name="TextAppearance.Compat.Notification.Time.Media" parent="@style/TextAppearance.Compat.Notification.Time" />
+<style name="TextAppearance.Compat.Notification.Title.Media" parent="@style/TextAppearance.Compat.Notification.Title" />
+<style name="TermApp" parent="@android:style/Theme.Material.Light.LightStatusBar"><item name="android:colorPrimary">#ffffffff</item><item name="android:colorPrimaryDark">#ffc84646</item><item name="android:colorAccent">#ff03dac5</item><item name="android:navigationBarColor">?android:colorPrimary</item></style>
+</resources>
