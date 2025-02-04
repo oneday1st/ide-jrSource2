@@ -4669,11 +4669,7 @@
 <public type="string" name="dialog_yes" id="0x7f0d05ee" />
 <public type="string" name="firebase_database_url" id="0x7f0d05ef" />
 <public type="string" name="gcm_defaultSenderId" id="0x7f0d05f0" />
-<public type="string" name="google_api_key" id="0x7f0d05f1" />
-<public type="string" name="google_app_id" id="0x7f0d05f2" />
-<public type="string" name="google_crash_reporting_api_key" id="0x7f0d05f3" />
-<public type="string" name="google_storage_bucket" id="0x7f0d05f4" />
-<public type="string" name="project_id" id="0x7f0d05f5" />
+
 <public type="string" name="s1" id="0x7f0d05f6" />
 <public type="string" name="s2" id="0x7f0d05f7" />
 <public type="string" name="s3" id="0x7f0d05f8" />
