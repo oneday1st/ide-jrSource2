@@ -1,1 +1,5 @@
-
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:icon="?icon_add" android:id="@id/commitMenuCommit" android:title="@string/command_git_commit" android:showAsAction="always|withText" />
+	<item android:icon="?icon_delete" android:id="@id/commitMenuDiscard" android:title="Discard…" android:showAsAction="always|withText" />
+</menu>
