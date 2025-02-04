@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="1000.0dip">
+	<com.s1243808733.aide.widget.CustomSwipeRefreshLayout android:tag="SwipeRefreshLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<com.aide.ui.views.CustomKeysListView android:theme="@style/FastScrollTheme" android:id="@id/filebrowserFileList" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/BrowserListView" />
+	</com.s1243808733.aide.widget.CustomSwipeRefreshLayout>
+</LinearLayout>

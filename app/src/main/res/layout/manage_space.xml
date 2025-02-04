@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<Button android:id="@id/clearAll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear All data" />
+	<Button android:id="@id/clearCache" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear Cache data" />
+	<Button android:id="@id/clearGradle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear Gradle data" />
+	<Button android:id="@id/clearTerminal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear Terminal data" />
+	<Button android:id="@id/clearMaven" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear downloaded Maven data" />
+	<Button android:id="@id/clearPreference" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear Preference" />
+</LinearLayout>

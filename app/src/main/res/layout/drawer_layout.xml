@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<androidj.support.v4.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+			<com.termux.view.TerminalView android:scrollbarThumbVertical="@drawable/terminal_scroll_shape" android:id="@id/terminal_view" android:focusableInTouchMode="true" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+			<androidj.support.v4.view.ViewPager android:id="@id/viewpager" android:background="@android:drawable/screen_background_dark_transparent" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_alignParentBottom="true" />
+		</LinearLayout>
+		<LinearLayout android:layout_gravity="start" android:orientation="vertical" android:id="@id/left_drawer" android:background="?android:windowBackground" android:descendantFocusability="blocksDescendants" android:layout_width="240.0dip" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:choiceMode="singleChoice">
+			<ListView android:layout_gravity="top" android:id="@id/left_drawer_list" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="@null" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:buttonBarStyle">
+				<Button android:id="@id/toggle_keyboard_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/toggle_soft_keyboard" android:layout_weight="1.0" style="?android:buttonBarButtonStyle" />
+				<Button android:id="@id/new_session_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/new_session" android:layout_weight="1.0" style="?android:buttonBarButtonStyle" />
+			</LinearLayout>
+		</LinearLayout>
+	</androidj.support.v4.widget.DrawerLayout>
+</RelativeLayout>
