@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="Base.DialogThemeLight" parent="@style/Base.V23.DialogThemeLight" />
+<style name="Base.Theme.Material.Light.Dialog.Alert" parent="@style/Base.V23.Theme.Material.Light.Dialog.Alert" />
+<style name="Base.V23.DialogThemeLight" parent="@style/Base.V21.DialogThemeLight"><item name="android:windowLightStatusBar">true</item></style>
+<style name="Base.V23.Theme.Material.Light.Dialog.Alert" parent="@style/Base.V21.Theme.Material.Light.Dialog.Alert"><item name="android:windowLightStatusBar">true</item></style>
+</resources>
