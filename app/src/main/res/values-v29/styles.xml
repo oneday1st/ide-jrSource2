@@ -1,1 +1,10 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="Base.MyAppThemeLight" parent="@style/Base.V29.MyAppThemeLight" />
+<style name="Base.MyAppThemeDark" parent="@style/Base.V29.MyAppThemeDark" />
+<style name="SplashTheme" parent="@style/Base.V29.SplashTheme" />
+<style name="SplashTheme_Light" parent="@android:style/Theme.Material.Light.NoActionBar"><item name="android:windowBackground">@drawable/bg_splash</item><item name="android:windowContentOverlay">@null</item><item name="android:windowAnimationStyle">@null</item><item name="android:windowExitAnimation">@android:anim/fade_out</item><item name="android:windowTranslucentStatus">true</item><item name="android:windowTranslucentNavigation">true</item><item name="android:forceDarkAllowed">false</item></style>
+<style name="Base.V29.MyAppThemeDark" parent="@style/Base.V27.MyAppThemeDark"><item name="android:forceDarkAllowed">false</item></style>
+<style name="Base.V29.MyAppThemeLight" parent="@style/Base.V27.MyAppThemeLight"><item name="android:forceDarkAllowed">false</item></style>
+<style name="Base.V29.SplashTheme" parent="@style/Base.V21.SplashTheme"><item name="android:forceDarkAllowed">false</item></style>
+</resources>
